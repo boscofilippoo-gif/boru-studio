@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BORU — Palette colori</title>
+<style>
+  :root { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  body { margin:0; background:#fcfaf6; color:#15110d; padding:48px 32px; -webkit-font-smoothing:antialiased; }
+  h1 { font-size:28px; letter-spacing:-.02em; margin:0 0 4px; }
+  .sub { color:#6d6863; margin:0 0 40px; font-size:15px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:#6d6863; margin:40px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px; }
+  .sw { border:1px solid #e1ddd8; border-radius:12px; overflow:hidden; background:#fff; }
+  .chip { height:96px; }
+  .meta { padding:12px 14px; }
+  .name { font-weight:600; font-size:14px; margin:0 0 6px; }
+  .val { font-size:12px; color:#6d6863; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; line-height:1.6; }
+  .val span { display:block; }
+  .dark-section { background:#100c0a; color:#f7f5f1; border-radius:16px; padding:24px; margin-top:8px; }
+  .dark-section h2 { color:#a39d98; margin-top:0; }
+  .dark-section .sw { background:#191512; border-color:rgba(255,255,255,.12); }
+  .dark-section .name { color:#f7f5f1; }
+  .dark-section .val { color:#a39d98; }
+</style>
+</head>
+<body>
+  <h1>BORU — Palette colori</h1>
+  <p class="sub">Neutri caldi (sabbia/grigio) + accento ruggine/terracotta · formato sorgente OKLCH</p>
+
+  <h2>Tema chiaro</h2>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:#FCFAF6"></div><div class="meta"><p class="name">Background</p><p class="val"><span>#FCFAF6</span><span>rgb(252,250,246)</span><span>oklch(.985 .005 85)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#15110D"></div><div class="meta"><p class="name">Foreground</p><p class="val"><span>#15110D</span><span>rgb(21,17,13)</span><span>oklch(.18 .01 60)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid #e1ddd8"></div><div class="meta"><p class="name">Card</p><p class="val"><span>#FFFFFF</span><span>rgb(255,255,255)</span><span>oklch(1 0 0)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#1A1512"></div><div class="meta"><p class="name">Primary</p><p class="val"><span>#1A1512</span><span>rgb(26,21,18)</span><span>oklch(.2 .01 60)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#F3F2EE"></div><div class="meta"><p class="name">Muted</p><p class="val"><span>#F3F2EE</span><span>rgb(243,242,238)</span><span>oklch(.96 .005 85)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#6D6863"></div><div class="meta"><p class="name">Muted foreground</p><p class="val"><span>#6D6863</span><span>rgb(109,104,99)</span><span>oklch(.52 .01 60)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#AF5331"></div><div class="meta"><p class="name">Accent (ruggine)</p><p class="val"><span>#AF5331</span><span>rgb(175,83,49)</span><span>oklch(.55 .13 40)</span></p></div></div>
+    <div class="sw"><div class="chip" style="background:#E1DDD8"></div><div class="meta"><p class="name">Border</p><p class="val"><span>#E1DDD8</span><span>rgb(225,221,216)</span><span>oklch(.9 .008 80)</span></p></div></div>
+  </div>
+
+  <div class="dark-section">
+    <h2>Tema scuro</h2>
+    <div class="grid">
+      <div class="sw"><div class="chip" style="background:#100C0A"></div><div class="meta"><p class="name">Background</p><p class="val"><span>#100C0A</span><span>rgb(16,12,10)</span><span>oklch(.16 .008 60)</span></p></div></div>
+      <div class="sw"><div class="chip" style="background:#F7F5F1"></div><div class="meta"><p class="name">Foreground</p><p class="val"><span>#F7F5F1</span><span>rgb(247,245,241)</span><span>oklch(.97 .005 85)</span></p></div></div>
+      <div class="sw"><div class="chip" style="background:#191512;border-bottom:1px solid rgba(255,255,255,.12)"></div><div class="meta"><p class="name">Card</p><p class="val"><span>#191512</span><span>rgb(25,21,18)</span><span>oklch(.2 .008 60)</span></p></div></div>
+      <div class="sw"><div class="chip" style="background:#272320"></div><div class="meta"><p class="name">Muted</p><p class="val"><span>#272320</span><span>rgb(39,35,32)</span><span>oklch(.26 .008 60)</span></p></div></div>
+      <div class="sw"><div class="chip" style="background:#A39D98"></div><div class="meta"><p class="name">Muted foreground</p><p class="val"><span>#A39D98</span><span>rgb(163,157,152)</span><span>oklch(.7 .01 60)</span></p></div></div>
+      <div class="sw"><div class="chip" style="background:#CA653C"></div><div class="meta"><p class="name">Accent (ruggine)</p><p class="val"><span>#CA653C</span><span>rgb(202,101,60)</span><span>oklch(.62 .14 42)</span></p></div></div>
+    </div>
+  </div>
+
+  <h2>Accento spotlight (titolo hero)</h2>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:#CE6234"></div><div class="meta"><p class="name">Spotlight ruggine</p><p class="val"><span>#CE6234</span><span>rgb(206,98,52)</span><span>oklch(.62 .15 42)</span></p></div></div>
+  </div>
+</body>
+</html>

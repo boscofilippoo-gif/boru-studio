@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+/* ── Font del brand ──────────────────────────────────────────────────
+   Titoli: Poppins. Corpo: Hanken Grotesk (variabile). Accenti: Breathing (script del logo). */
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./assets/fonts/HankenGrotesk.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Breathing";
+  src: url("./assets/fonts/Breathing.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Brand identity BORU studio — SOLO questi 4 colori (niente varianti) ──
+   nero #1a1613 · porcellana #fcfaf6 · azzurro #b1ddf1 · rosa #ef95b4
+   Le tonalità intermedie sono SEMPRE i 4 colori con alpha, mai tinte nuove. */
+:root {
+  --radius: 0.625rem;
+
+  --nero: #1a1613;
+  --porcellana: #fcfaf6;
+  --azzurro: #b1ddf1;
+  --rosa: #ef95b4;
+
+  /* tema scuro: nero come base, porcellana come testo */
+  --background: var(--nero);
+  --foreground: var(--porcellana);
+  --muted-foreground: color-mix(in oklab, var(--porcellana) 62%, transparent);
+  --border: color-mix(in oklab, var(--porcellana) 14%, transparent);
+
+  --accent: var(--azzurro);
+  --accent-foreground: var(--nero);
+  --accent-strong: var(--azzurro);
+  --accent-2: var(--rosa);
+  --accent-2-foreground: var(--nero);
+  --accent-2-strong: var(--rosa);
+
+  /* pannelli invertiti (porcellana su nero) */
+  --panel: var(--porcellana);
+  --panel-foreground: var(--nero);
+  --panel-muted: color-mix(in oklab, var(--nero) 64%, transparent);
+  --panel-border: color-mix(in oklab, var(--nero) 14%, transparent);
+
+  --ring: var(--azzurro);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-2: var(--accent-2);
+  --color-accent-2-foreground: var(--accent-2-foreground);
+  --color-accent-2-strong: var(--accent-2-strong);
+  --color-panel: var(--panel);
+  --color-panel-foreground: var(--panel-foreground);
+  --color-panel-muted: var(--panel-muted);
+  --color-panel-border: var(--panel-border);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  /* famiglie font: corpo (Hanken), titoli (Poppins), script del logo (Breathing) */
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-title: "Poppins", "Hanken Grotesk", sans-serif;
+  --font-script: "Breathing", cursive;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--azzurro);
+  color: var(--nero);
+}
+
+/* ── Animazioni d'ingresso hero (una volta, all'apertura) ───────────── */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: hero-rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--delay, 0s);
+}
+
+.hero-bg-enter {
+  opacity: 0;
+  animation: hero-fade 1.6s ease-out 0.1s both;
+}
+
+/* Spotlight azzurro che segue il mouse sul testo del titolo. */
+.title-spotlight {
+  position: relative;
+}
+.title-spotlight::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    140px circle at var(--mx, 50%) var(--my, 50%),
+    #b1ddf1 0%,
+    rgb(177 221 241 / 0.5) 35%,
+    transparent 70%
+  );
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+  opacity: var(--spot, 0);
+  transition: opacity 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-spotlight::after { display: none; }
+}
+
+/* Parola in script Breathing dentro ai titoli: leggermente più grande del
+   testo che la circonda (lo script disegna "piccolo") e fuori-griglia di un soffio. */
+.script-accent {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-transform: none;
+  vertical-align: baseline;
+  display: inline-block;
+  transform: rotate(-2deg) translateY(0.04em);
+  padding-inline: 0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-bg-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
