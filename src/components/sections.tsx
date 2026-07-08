@@ -559,10 +559,10 @@ export function Contatto() {
               ciao@boru.studio
             </a>
             <div className="flex gap-4">
-              <a href="/privacy" className="transition-colors hover:text-accent">
+              <a href="/privacy.html" className="transition-colors hover:text-accent">
                 Privacy policy
               </a>
-              <a href="/cookie" className="transition-colors hover:text-accent">
+              <a href="/cookie.html" className="transition-colors hover:text-accent">
                 Cookie policy
               </a>
             </div>

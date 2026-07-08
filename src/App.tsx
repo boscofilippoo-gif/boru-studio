@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 import { ScrollExpandHero } from "@/components/ui/scroll-expand-hero";
 import {
   Dati,
@@ -26,6 +27,7 @@ function App() {
       <ComeFunziona />
       <ChiSiamo />
       <Contatto />
+      <CookieBanner />
     </main>
   );
 }
