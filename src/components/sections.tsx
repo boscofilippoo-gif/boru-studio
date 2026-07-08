@@ -525,7 +525,7 @@ export function Contatto() {
                 Parliamo del tuo processo
               </a>
               <a
-                href="mailto:ciao@boru.studio"
+                href="mailto:info@borustudio.it"
                 className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-border px-7 py-3.5 text-base font-medium text-foreground transition-colors duration-200 hover:border-accent hover:text-accent"
               >
                 Scrivici una mail
@@ -555,8 +555,8 @@ export function Contatto() {
             </p>
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
-            <a href="mailto:ciao@boru.studio" className="transition-colors hover:text-accent">
-              ciao@boru.studio
+            <a href="mailto:info@borustudio.it" className="transition-colors hover:text-accent">
+              info@borustudio.it
             </a>
             <div className="flex gap-4">
               <a href="/privacy.html" className="transition-colors hover:text-accent">
