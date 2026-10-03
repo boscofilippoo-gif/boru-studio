@@ -506,7 +506,7 @@ export function Contatto() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Raccontaci come lavora la tua azienda. In 30 minuti capiamo insieme dove si perde più
+              Raccontaci come lavora la tua azienda. In 45 minuti capiamo insieme dove si perde più
               tempo, se c'è qualcosa di reale da automatizzare, e cosa potrebbe cambiare
               concretamente. Nessuna presentazione commerciale: solo una conversazione tra
               persone.
