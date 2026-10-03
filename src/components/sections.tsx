@@ -304,8 +304,8 @@ export function StrumentiAI() {
 const PASSI = [
   {
     n: "01",
-    title: "Ci racconti come lavori: 30 minuti",
-    text: "Una chiamata, senza presentazioni commerciali e senza pitch. Ti facciamo domande sul tuo modo di lavorare: quali strumenti usi, come arrivano le richieste, dove si crea più attrito. In 30 minuti riusciamo quasi sempre a identificare uno o più processi che potrebbero girare da soli. Se non vediamo nulla di reale da automatizzare, te lo diciamo subito.",
+    title: "Ci racconti come lavori: 45 minuti",
+    text: "Una chiamata, senza presentazioni commerciali e senza pitch. Ti facciamo domande sul tuo modo di lavorare: quali strumenti usi, come arrivano le richieste, dove si crea più attrito. In 45 minuti riusciamo quasi sempre a identificare uno o più processi che potrebbero girare da soli. Se non vediamo nulla di reale da automatizzare, te lo diciamo subito.",
   },
   {
     n: "02",
