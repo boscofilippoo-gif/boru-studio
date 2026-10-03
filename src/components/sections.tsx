@@ -15,6 +15,7 @@ import {
 import { Reveal } from "@/components/ui/reveal";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { PillarsCarousel } from "@/components/ui/pillars-carousel";
+import { openPreferences } from "@/lib/consent";
 import { BOOKING_URL } from "@/components/ui/scroll-expand-hero";
 import logoBianco from "@/assets/logo-bianco.png";
 
@@ -304,8 +305,8 @@ export function StrumentiAI() {
 const PASSI = [
   {
     n: "01",
-    title: "Ci racconti come lavori: 30 minuti",
-    text: "Una chiamata, senza presentazioni commerciali e senza pitch. Ti facciamo domande sul tuo modo di lavorare: quali strumenti usi, come arrivano le richieste, dove si crea più attrito. In 30 minuti riusciamo quasi sempre a identificare uno o più processi che potrebbero girare da soli. Se non vediamo nulla di reale da automatizzare, te lo diciamo subito.",
+    title: "Ci racconti come lavori: 45 minuti",
+    text: "Una chiamata, senza presentazioni commerciali e senza pitch. Ti facciamo domande sul tuo modo di lavorare: quali strumenti usi, come arrivano le richieste, dove si crea più attrito. In 45 minuti riusciamo quasi sempre a identificare uno o più processi che potrebbero girare da soli. Se non vediamo nulla di reale da automatizzare, te lo diciamo subito.",
   },
   {
     n: "02",
@@ -506,7 +507,7 @@ export function Contatto() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Raccontaci come lavora la tua azienda. In 30 minuti capiamo insieme dove si perde più
+              Raccontaci come lavora la tua azienda. In 45 minuti capiamo insieme dove si perde più
               tempo, se c'è qualcosa di reale da automatizzare, e cosa potrebbe cambiare
               concretamente. Nessuna presentazione commerciale: solo una conversazione tra
               persone.
@@ -565,6 +566,13 @@ export function Contatto() {
               <a href="/cookie.html" className="transition-colors hover:text-accent">
                 Cookie policy
               </a>
+              <button
+                type="button"
+                onClick={openPreferences}
+                className="cursor-pointer transition-colors hover:text-accent"
+              >
+                Gestisci cookie
+              </button>
             </div>
             <span>© {new Date().getFullYear()} BORU studio</span>
           </div>

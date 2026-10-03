@@ -4,8 +4,7 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/ui/grid-pattern";
 
-// TODO: sostituisci con il link Calendly/Cal.com reale
-const BOOKING_URL = "https://cal.com/boru-studio";
+const BOOKING_URL = "https://cal.com/borustudio/45min";
 
 // helper: mappa v dall'intervallo [a,b] a [c,d], con clamp
 const mapClamp = (v: number, a: number, b: number, c: number, d: number) => {
