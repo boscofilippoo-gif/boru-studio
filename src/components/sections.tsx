@@ -15,6 +15,7 @@ import {
 import { Reveal } from "@/components/ui/reveal";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { PillarsCarousel } from "@/components/ui/pillars-carousel";
+import { openPreferences } from "@/lib/consent";
 import { BOOKING_URL } from "@/components/ui/scroll-expand-hero";
 import logoBianco from "@/assets/logo-bianco.png";
 
@@ -565,6 +566,13 @@ export function Contatto() {
               <a href="/cookie.html" className="transition-colors hover:text-accent">
                 Cookie policy
               </a>
+              <button
+                type="button"
+                onClick={openPreferences}
+                className="cursor-pointer transition-colors hover:text-accent"
+              >
+                Gestisci cookie
+              </button>
             </div>
             <span>© {new Date().getFullYear()} BORU studio</span>
           </div>
